@@ -16,8 +16,6 @@
 #
 default: &default
   adapter: postgresql
-  username: cappa
-  password: 12345
   encoding: unicode
   host: localhost
   # For details on connection pooling, see rails configuration guide
