@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :order do
-    name "MyString"
-address "MyString"
-email "MyString"
+    name    {Faker::Name.name}
+    address {Faker::Lorem.sentence(3,false,2)}
+    email   {Faker::Internet.email}
   end
 
 end
