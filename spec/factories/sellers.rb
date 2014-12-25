@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :seller do
-    name "MyString"
-password "MyString"
+    name     { Faker::Name.name}
+    password { Faker::Internet.password}
   end
 
 end
