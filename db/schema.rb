@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20141223213519) do
   enable_extension "plpgsql"
 
   create_table "carts", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :nul => false
+    t.datetime "updated_at", :nul => false
   end
 
   create_table "categories", force: true do |t|
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20141223213519) do
     t.integer  "product_id"
     t.integer  "cart_id"
     t.integer  "order_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :nul => false
+    t.datetime "updated_at", :nul => false
   end
 
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20141223213519) do
     t.string   "name"
     t.string   "address"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :nul => false
+    t.datetime "updated_at", :nul => false
   end
 
   create_table "products", force: true do |t|
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20141223213519) do
     t.integer  "count"
     t.decimal  "price"
     t.integer  "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :nul => false
+    t.datetime "updated_at", :nul => false
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
