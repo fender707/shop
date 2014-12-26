@@ -3,8 +3,6 @@ class CreateSellers < ActiveRecord::Migration
     create_table :sellers do |t|
       t.string :name
       t.string :password
-
-      t.timestamps
     end
   end
 end
