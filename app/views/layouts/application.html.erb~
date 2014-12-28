@@ -43,7 +43,7 @@
   </head>
   <body>
      <div id="banner">
-      <%= @page_title || "My                                                            First                                                            Shop" %>
+      <%= @page_title || "My            First          Shop" %>
      </div>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">

@@ -18,7 +18,7 @@
 background: #E8E8E8;
 padding: 1px;
 border-bottom: 1px solid ;
-font: small-caps 25px/25px "TimesMew Roman" , serif;
+font: small-caps 30px/30px "TimesMew Roman" , serif;
 color: #787878;
 text-align: center;
 img {
