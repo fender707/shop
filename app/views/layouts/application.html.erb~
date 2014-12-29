@@ -43,7 +43,7 @@
   </head>
   <body>
      <div id="banner">
-      <%= @page_title || "My            First          Shop" %>
+      <%= @page_title || "My                                                            First                                                            Shop" %>
      </div>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -80,13 +80,14 @@
             <center><h3>TOP</h3></center>
             <ul class="nav nav-list">
               <li class="nav-header">Categories</li>
-               <li><%= link_to "Food&Drink", "/path1"  %></li>
-               <li><%= link_to "Books", "/path2"  %></li>
-               <li><%= link_to "Electronics", "/path3"  %></li>
-               <li><%= link_to "Clothing", "/path4"  %></li>
-               <li><%= link_to "Shoes", "/path5"  %></li>
-               <li><%= link_to "Hobby", "/path6"  %></li>
-               <li><%= link_to "Sport", "/path7"  %></li>
+               <li><%= link_to "Food&Drink", "/#path1"  %></li>
+               <li><%= link_to "Books", "/#path2"  %></li>
+               <li><%= link_to "Electronics", "/#path3"  %></li>
+               <li><%= link_to "Clothing", "/#path4"  %></li>
+               <li><%= link_to "Shoes", "/#path5"  %></li>
+               <li><%= link_to "Hobby", "/#path6"  %></li>
+               <li><%= link_to "Sport", "/#path7"  %></li>
+
               <center> <a class="brand" href="/"><%= image_tag("Корзинка88x118.png") %></a></center><br/>
             </ul>
           </div><!--/.well -->
