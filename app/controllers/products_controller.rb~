@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
-end
 # GET /reviews/new
 # GET /reviews/new.json
   def new  
@@ -23,7 +22,8 @@ end
 # POST /reviews
 # POST /reviews.json
   def create
-   @product = Product.new(params[:product])
+    @product = Product.new(myparams)
+    @product.save
   end
 # PUT /reviews/1
 # PUT /reviews/1.json
@@ -45,9 +45,17 @@ def destroy
 @product = Product.find(params[:id])
 @product.destroy
 respond_to do |format|
-format.html { redirect_to reviews_url }
+format.html { redirect_to products_url }
 format.json { head :no_content }
 end
 end
+
+
+private 
+   
+  def myparams
+    params.require(:product).permit(:image_url, :title, :description, :count, :price)
+  end
+
 end
 

@@ -22,7 +22,16 @@ class ProductsController < ApplicationController
 # POST /reviews
 # POST /reviews.json
   def create
-   @product = Product.new(params[:product])
+   @product = Product.new(myparams)
+     respond_to do |format|
+if @product.save
+format.html { redirect_to @product, notice: 'Product was successfully created.' }
+format.json { render json: @product, status: :created, location: @product }
+else
+format.html { render action: "new" }
+format.json { render json: @product.errors, status: :unprocessable_entity }
+end
+end
   end
 # PUT /reviews/1
 # PUT /reviews/1.json
@@ -44,9 +53,17 @@ def destroy
 @product = Product.find(params[:id])
 @product.destroy
 respond_to do |format|
-format.html { redirect_to reviews_url }
+format.html { redirect_to products_url }
 format.json { head :no_content }
 end
 end
+
+
+private 
+   
+  def myparams
+    params.require(:product).permit(:image_url, :title, :description, :count, :price)
+  end
+
 end
 
