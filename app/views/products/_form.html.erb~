@@ -1,0 +1,29 @@
+<%= form_for(@product) do |f| %>
+
+<div class="field">
+<%= f.label :title %><br />
+<%= f.text_field :title %>
+</div>
+<div class="field">
+<%= f.label :description %><br />
+<%= f.text_area :description, rows: 4 %>
+</div>
+<div class="field">
+<%= f.label :image_url %><br />
+<%= f.text_field :image_url %>
+</div>
+<div class="field">
+<%= f.label :price %><br />
+<%= f.text_field :price %>
+</div>
+
+<div class="field">
+<%= f.label :count %><br />
+<%= f.text_field :count %>
+</div>
+<div class="actions">
+<%= f.submit %><br />
+<%= link_to 'Back', products_path %>
+</div>
+</div>
+<% end %>
