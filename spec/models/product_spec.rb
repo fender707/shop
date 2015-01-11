@@ -15,7 +15,7 @@ RSpec.describe Product do
 
   it {should_not allow_value('').for(:title)}
 
-  it {should validate_presence_of(:category)}
+  #it {should validate_presence_of(:category)}
   
   it {should validate_presence_of(:title)}
 
