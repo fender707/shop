@@ -25,8 +25,7 @@ class ProductsController < ApplicationController
     @product = Product.new(myparams)
       respond_to do |format|
     if @product.save
-      format.html { redirect_to @product, notice: 'Product was successfully created.' }
-      format.json { render json: @product, status: :created, location: @product }
+      format.html {redirect_to @product, notice: 'Product was successfully created.'}
     else
       format.html { render action: "new" }
       format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -38,7 +37,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     respond_to do |format|
-      if @product.update_attributes(params[:product])
+      if @product.update_attributes(myparams)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else
