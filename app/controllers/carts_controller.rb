@@ -1,11 +1,12 @@
 class CartsController < ApplicationController  
 
+  before_action :find_cart, only: [ :show, :destroy, :update, :edit]
+
   def index
     @carts = Cart.all
   end
 
   def show
-    @cart = Cart.find(params[:id])
   end
 
   def new  
@@ -13,7 +14,6 @@ class CartsController < ApplicationController
   end
 
   def edit
-    @cart = Cart.find(params[:id])
   end
 
   def create
@@ -29,7 +29,6 @@ class CartsController < ApplicationController
   end
 
   def update
-    @cart = Cart.find(params[:id])
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
         format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
@@ -49,5 +48,10 @@ class CartsController < ApplicationController
       format.json { head :no_content }
   end
 end
+
+  private
+    def find_cart
+      @cart = Cart.find(params[:id])
+    end
 
 end
