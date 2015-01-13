@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 
+  before_action :find_product, only: [:show,:update,:destroy,:edit]
    # GET /reviews
 # GET /reviews.json
   def index
@@ -8,7 +9,6 @@ class ProductsController < ApplicationController
 # GET /reviews/1
 # GET /reviews/1.json
   def show
-    @product = Product.find(params[:id])
   end
 # GET /reviews/new
 # GET /reviews/new.json
@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
   end
 # GET /reviews/1/edit
   def edit
-    @product = Product.find(params[:id])
   end
 # POST /reviews
 # POST /reviews.json
@@ -35,7 +34,6 @@ class ProductsController < ApplicationController
 # PUT /reviews/1
 # PUT /reviews/1.json
   def update
-    @product = Product.find(params[:id])
     respond_to do |format|
       if @product.update_attributes(myparams)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -49,7 +47,6 @@ class ProductsController < ApplicationController
 # DELETE /reviews/1
 # DELETE /reviews/1.json
   def destroy
-    @product = Product.find(params[:id])
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url }
@@ -60,6 +57,10 @@ end
 
 private 
    
+  def find_product
+    @product = Product.find(params[:id])
+  end
+
   def myparams
     params.require(:product).permit(:image_url, :title, :description, :count, :price)
   end
