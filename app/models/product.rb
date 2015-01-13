@@ -6,5 +6,15 @@ class Product < ActiveRecord::Base
   validates_presence_of :title, :price, :count
   validates :title, length: { in: 3..120}
   #validates :category, presence: true
+
+  define_index do
+    indexes created_at, :sortable => true
+    indexes title
+    indexes description
+    indexes price
+    indexes count
+    
+    has updated_at
+  end
   
 end
