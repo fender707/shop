@@ -57,5 +57,6 @@ Rails.application.routes.draw do
        resources :products
        resources :carts
        resources :line_items, only: [:create]
+       resources :orders, only: [:new]
   #   end
 end
