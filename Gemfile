@@ -28,8 +28,6 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
-gem 'thinking-sphinx', '3.0.6'
-
 gem 'whenever', :require => false
 
 # Use ActiveModel has_secure_password
