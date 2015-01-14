@@ -18,6 +18,3 @@
 /config/database.yml
 /public/*
 *.swp
-
-#ignore temp files
-*~
