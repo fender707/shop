@@ -21,3 +21,6 @@
   
   Ссылка на струкрутру БД:
    http://www.ex.ua/416638600872
+
+  Ссылка на heroku:
+   https://myfirstshop.herokuapp.com/
