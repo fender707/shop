@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'info/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -53,6 +54,8 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
+       resources :products
+       resources :carts
+       resources :line_items, only: [:create]
   #   end
 end
