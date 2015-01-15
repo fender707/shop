@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20150111191254) do
   end
 
   create_table "categories", force: true do |t|
-    t.string "name",        limit: nil
-    t.string "description", limit: nil
+    t.string "name"
+    t.string "description"
   end
 
   create_table "line_items", force: true do |t|
@@ -40,16 +40,16 @@ ActiveRecord::Schema.define(version: 20150111191254) do
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
 
   create_table "orders", force: true do |t|
-    t.string   "name",       limit: nil
-    t.string   "address",    limit: nil
-    t.string   "email",      limit: nil
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
-    t.string   "title",       limit: nil
-    t.text     "description"
+    t.string   "title"
+    t.string   "description"
     t.integer  "count"
     t.decimal  "price"
     t.integer  "category_id"
@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 20150111191254) do
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
 
   create_table "sellers", force: true do |t|
-    t.string "name",     limit: nil
-    t.string "password", limit: nil
+    t.string "name"
+    t.string "password"
   end
 
   create_table "users", force: true do |t|
