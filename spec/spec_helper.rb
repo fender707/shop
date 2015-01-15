@@ -27,10 +27,10 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/factories"
-
   config.infer_base_class_for_anonymous_controllers = false
-
+  config.infer_spec_type_from_file_location!
   config.order = "random"
+  config.include Devise::TestHelpers, type: :controller
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
