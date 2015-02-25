@@ -56,21 +56,28 @@
                <li><%= link_to "Books", "/#path2"  %></li>
                <li><%= link_to "Electronics", "/#path3"  %></li>
                <li><%= link_to "Clothing", "/#path4"  %></li>
-               <li><%= link_to "Shoes", "/#path5"  %></li>
-               <li><%= link_to "Hobby", "/#path6"  %></li>
-               <li><%= link_to "Sport", "/#path7"  %></li>
-               <li><%= link_to "Others", "/#path8"  %></li>
                <li><%= link_to "Contact", "/#path9"  %></li>
                
    	       <% if user_signed_in? %>
-                 <li>
-                 <%= link_to('Logout',destroy_user_session_path, method: :delete) %></li>
+                 <li class="searchh">
+                   <%= current_user.email %>
                  </li>
+                 <li>
+                   <%= link_to('Logout',destroy_user_session_path, method: :delete) %></li>
+                 </li>
+
                <% else %>
                  <li>
                  <%= link_to('Login', new_user_session_path) %>
                  </li>
                <% end %>
+             <li class="searchh">
+               <%= form_tag(root_path, :method => "get", id: "search-form") do %>
+                 <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+                 <%= submit_tag "Search", :name => nil %>
+               <% end %>
+             </li>
+
 	  </ul>
         </div>
       </div>
