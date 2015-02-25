@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
    # GET /reviews
 # GET /reviews.json
   def index
-    @products = Product.all
+    if params[:search]
+      @products = Product.search(params[:search]).order("Created_at DESC")
+    else
+      @products = Product.all.order("Created_at DESC")
+    end
   end
 # GET /reviews/1
 # GET /reviews/1.json
