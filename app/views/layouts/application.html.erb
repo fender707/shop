@@ -59,7 +59,7 @@
                <li><%= link_to "Contact", "/#path9"  %></li>
                
    	       <% if user_signed_in? %>
-                 <li class="searchh">
+                 <li class="loginn">
                    <%= current_user.email %>
                  </li>
                  <li>
@@ -73,7 +73,7 @@
                <% end %>
              <li class="searchh">
              <form>
-               <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Keyword' >
+               <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Search' >
              </form> 
              </li>
 
