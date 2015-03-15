@@ -54,7 +54,7 @@ Product.create!([
 {
   title: "Kurzweil SP4-7",
   description: "Kurzweil's SP4-7 is the modern successor to our best selling SP76, which famously combined world-class Kurzweil sound quality with previously unheard of affordability and portability.",
-  image_url: "images.jpeg",
+  image_url: "Kurzweil_logo.jpeg",
   price: "800" ,
   count: 10,
   category: music_category
