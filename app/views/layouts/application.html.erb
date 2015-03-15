@@ -40,7 +40,7 @@
   <body class='<%= controller.controller_name %>'>
  
     <div id="banner">
-      <%= @page_title || "My                                                            First                                                            Shop" %>
+      <%= @page_title || "My First Shop" %>
      </div>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -95,9 +95,8 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <center><h3>TOP</h3></center>
             <ul class="nav nav-list">
-              <li class="nav-header">Categories</li>
+              <center><h4><li class="nav-header">Categories</li></h4></center>
   	       <% categories.each do |category| %>
                  <li><%= link_to category.name, root_path(filter: category.id) %></li>
                <% end %>

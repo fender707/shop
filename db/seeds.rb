@@ -13,6 +13,7 @@ foto_category = Category.create!(name: 'Foto')
 music_category = Category.create!(name: 'Music')
 shoping_category = Category.create!(name: 'Shoping')
 drink_category = Category.create!(name: 'Drink')
+book_category = Category.create!(name: 'Books')
 
 Product.create!([
 {  
@@ -54,7 +55,7 @@ Product.create!([
 {
   title: "Kurzweil SP4-7",
   description: "Kurzweil's SP4-7 is the modern successor to our best selling SP76, which famously combined world-class Kurzweil sound quality with previously unheard of affordability and portability.",
-  image_url: "Kurzweil_logo.jpeg",
+  image_url: "Kurzweil_logo.jpg",
   price: "800" ,
   count: 10,
   category: music_category
@@ -107,7 +108,37 @@ Product.create!([
   image_url: "oliver.jpg",
   price: "10" ,
   count: 10,
-  category: drink_category
+  category: book_category
+
+},
+
+{
+  title: "The Girl on the Train",
+  description: "(S J Watson, bestselling author of Before I Go To Sleep). Rachel catches the same commuter train every morning. She knows it will wait at the same signal each time, overlooking a row of back gardens.",
+  image_url: "girl.jpg",
+  price: "15" ,
+  count: 10,
+  category: book_category
+
+},
+
+{
+  title: "Secret Garden: An Inky Treasure Hunt and Colouring Book",
+  description: "This interactive activity book takes you on a ramble through a secret garden created in beautifully detailed pen-and-ink illustrations - all waiting to be brought to life through colouring",
+  image_url: "garden.jpg",
+  price: "18" ,
+  count: 10,
+  category: book_category
+
+},
+
+{
+  title: "The Day the Crayons Quit",
+  description: "Debut author Drew Daywalt and international bestseller Oliver Jeffers team up to create a colourful solution to a crayon-based crisis in this playful, imaginative story that will have children laughing.",
+  image_url: "day.jpg",
+  price: "20" ,
+  count: 10,
+  category: book_category
 
 }
 
