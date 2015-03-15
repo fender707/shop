@@ -17,6 +17,10 @@ class Product < ActiveRecord::Base
       all
     end 
   end
+
+  def self.filter(category_id)
+    where('products.category_id= ?', category_id)
+  end
  
   protected 
    

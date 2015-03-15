@@ -1,9 +1,9 @@
 class InfoController < ApplicationController
   def index
-    @products = Product.search(params[:keyword])
-   # else
-    #  @products = Product.all.order("Created_at DESC")
-   # end
-
+    if params[:filter]
+      @products = Product.search(params[:keyword]).order("Created_at DESC").filter(params[:filter])
+    else
+      @products = Product.search(params[:keyword]).order("Created_at DESC") 
+    end
   end
 end
