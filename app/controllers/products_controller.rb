@@ -5,10 +5,14 @@ class ProductsController < ApplicationController
 # GET /reviews.json
   def index
     if params[:search]
-      @products = Product.search(params[:search]).order("Created_at DESC")
+      @products = Product.search(params[:keyword]).filter(params[:filter])
+      @categories = Category.all
     else
       @products = Product.all.order("Created_at DESC")
+      @categories = Category.all
     end
+
+
   end
 # GET /reviews/1
 # GET /reviews/1.json
