@@ -40,7 +40,7 @@
   <body class='<%= controller.controller_name %>'>
  
     <div id="banner">
-      <%= @page_title || "My                                                            First                                                            Shop" %>
+      <%= @page_title || "My First Shop" %>
      </div>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -59,7 +59,7 @@
                <li><%= link_to "Contact", "/#path9"  %></li>
                
    	       <% if user_signed_in? %>
-                 <li class="searchh">
+                 <li class="loginn">
                    <%= current_user.email %>
                  </li>
                  <li>
@@ -72,10 +72,9 @@
                  </li>
                <% end %>
              <li class="searchh">
-               <%= form_tag(root_path, :method => "get", id: "search-form") do %>
-                 <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
-                 <%= submit_tag "Search", :name => nil %>
-               <% end %>
+             <form>
+               <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Search' >
+             </form> 
              </li>
 
 	  </ul>
@@ -96,16 +95,11 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <center><h3>TOP</h3></center>
             <ul class="nav nav-list">
-              <li class="nav-header">Categories</li>
-               <li><%= link_to "Food&Drink", "/#path1"  %></li>
-               <li><%= link_to "Books", "/#path2"  %></li>
-               <li><%= link_to "Electronics", "/#path3"  %></li>
-               <li><%= link_to "Clothing", "/#path4"  %></li>
-               <li><%= link_to "Shoes", "/#path5"  %></li>
-               <li><%= link_to "Hobby", "/#path6"  %></li>
-               <li><%= link_to "Sport", "/#path7"  %></li>
+              <center><h4><li class="nav-header">Categories</li></h4></center>
+  	       <% categories.each do |category| %>
+                 <li><%= link_to category.name, root_path(filter: category.id) %></li>
+               <% end %>
 
                <center><li><%= link_to image_tag("Корзинка88x118.png"), root_path %></center><br/>
             </ul>
