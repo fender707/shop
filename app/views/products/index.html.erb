@@ -1,4 +1,6 @@
-<h1>Listing products</h1>
+<h2>Listing products</h2>
+<%= link_to 'New product', new_product_path %>
+<br/>
   <table>
   <%@products.each do |product| %>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
@@ -21,5 +23,5 @@
   <% end %>
   </table>
 <br/>
-<br />
-<%= link_to 'New product', new_product_path %>
+
+
