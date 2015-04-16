@@ -47,7 +47,7 @@ gem 'whenever', :require => false
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
-
+gem 'will_paginate'
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner'

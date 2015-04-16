@@ -1,5 +1,9 @@
 class OrdersController < ApplicationController
 
+before_action :find_order, only: [:show,:destroy,:edit]
+  def index 
+    @orders = Order.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
+  end
   def create 
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(current_cart)
@@ -34,8 +38,20 @@ class OrdersController < ApplicationController
     end
   end
 
+  def destroy 
+   @order.destroy
+    respond_to do |format|
+      format.html { redirect_to orders_path}
+      format.json { head :no_content }
+    end
+  end
+
   private
   
+  def find_order
+    @order = Order.find(params[:id])
+  end
+
   def order_params
     params.require(:order).permit(:name, :address, :email)
   end
