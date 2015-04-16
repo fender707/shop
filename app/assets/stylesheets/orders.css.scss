@@ -1,20 +1,22 @@
 .depot_form{
-
+  width: 2%;
+  float: left;
   fieldset {
-    background: #efe;
+    background: #ffe;
     legend {
-      color: #dfd;
-      background: #141;
+      color: #787878;
+      background: #E8E8E8;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
 }
 
 form {
+     
     label {
       width: 5em;
       float: left;
-      text-align: right;
+      text-align: left;
       padding-top: 0.2em;
       margin-right: 0.1em;
       display: block;
@@ -23,8 +25,13 @@ form {
      select,textarea,input {
        margin-left: 0.5em;
      }
+   .actions {
+    margin-top: 5px;
+    text-align: center;
+    }
    .submit {
-      margin-left: 4em;
+      
+      margin-left: 6em;
     }
     br {
       display: none
