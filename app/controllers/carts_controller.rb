@@ -41,11 +41,13 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    @cart = Cart.find(params[:id])
+    @cart = current_cart
     @cart.destroy
+    session[:cart_id] = nil
     respond_to do |format|
-      format.html { redirect_to carts_url }
-      format.json { head :no_content }
+      format.html { redirect_to root_path,
+      notice: 'Your cart is currently empty!' }
+      format.json { head :ok }
   end
 end
 

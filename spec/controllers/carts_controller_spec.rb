@@ -71,15 +71,9 @@ RSpec.describe CartsController, :type => :controller do
   describe "DELETE #destroy" do
      before(:each) { @cart = FactoryGirl.create :cart}
 
-    it "deletes the cart" do
-      expect{
-        delete :destroy, id: @cart
-      }.to change(Cart, :count).by(-1)
-    end
-
     it "redirects to index" do
       delete :destroy, id: @cart
-      expect(response).to redirect_to carts_path 
+      expect(response).to redirect_to root_path 
     end
   end
 
