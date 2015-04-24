@@ -30,6 +30,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'bxslider-rails'
+
 gem 'whenever', :require => false
 
 # Use ActiveModel has_secure_password

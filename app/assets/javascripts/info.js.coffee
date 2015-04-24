@@ -1,3 +1,6 @@
+$(document).ready ->
+  $(".bxslider").bxSlider()
+
 $ ->
   $('h3').on 'mouseenter', (e) ->
     e.preventDefault()

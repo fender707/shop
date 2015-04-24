@@ -1,6 +1,10 @@
 
 <h1>Top products</h1>
-
+<ul class="bxslider">
+  <li><center><%= image_tag("car.jpg") %></center></li>
+  <li><center><%= image_tag("computer.JPG") %></center></li>
+  <li><center><%= image_tag("book.JPG") %></center></li>
+</ul>
  <% @products.each do |product| %>
  <div class="entry">
     <%= image_tag(product.image_url) %>
