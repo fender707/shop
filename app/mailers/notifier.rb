@@ -4,7 +4,7 @@ class Notifier < ActionMailer::Base
 
   def welcome(user)  
     @user = user
-    mail(to: user,
+    mail(to: user.email,
        subject: "[Signed up] Welcome #{user}")
   end 
 
