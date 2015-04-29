@@ -1,0 +1,19 @@
+
+<h2>Chat</h2>
+   <div class="row">
+     <ul id="chat">
+       <% if @messages.any? %>
+         <%= render @messages %>
+       <% end %>
+     </ul>
+   </div>
+
+   <div class="row">
+     <div id="inputfield">
+       <%= form_for Message.new, remote: true do |f| %>
+         <%= f.text_field :body %>
+         <%= f.submit "Send" %>
+       <% end %>
+     </div>
+   </div>
+

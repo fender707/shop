@@ -1,0 +1,13 @@
+
+ <div class="chatboxmessagecontent" >
+   <h5>
+     <h5 align="left"><%= current_user.email.split('@').first %></h5>
+     <h4><%= message.body %></h4>
+     <time datetime="<%= message.created_at %>" style="margin-left: 20px;">
+       <%= message.created_at.strftime("%H:%M") %>
+     </time>
+     
+   </h5>
+ </div>
+
+
