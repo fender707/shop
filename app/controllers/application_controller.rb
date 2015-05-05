@@ -3,9 +3,13 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :authenticate_user!
-  helper_method :categories
+  helper_method :categories, :messages
 
   private
+
+  def messages
+    @messages = Message.all
+  end
 
   def categories
     @categories = Category.all

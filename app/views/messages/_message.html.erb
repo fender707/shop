@@ -1,0 +1,16 @@
+
+ <div class="chatboxmessagecontent" >
+   <h5>
+     <h5 align="left">
+       <%= message.title %>
+     <time datetime="<%= message.created_at %>" style="margin-left: 20px;">
+       <%= message.created_at.strftime("%H:%M") %>
+     </time>
+     </h5>
+     <h4><%= message.body %></h4>
+
+     
+   </h5>
+ </div>
+
+
