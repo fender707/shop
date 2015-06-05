@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @contact.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @contact.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @contact.longitude %>
+</p>
+
+<%= image_tag "https://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@contact.latitude}%2C#{@contact.longitude}" %>
+
+<h3>Nearby Locations</h3>
+<ul>
+<% for contact in @contact.nearbys(10) %>
+  <li><%= link_to contact.address, contact %> (<%= contact.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
