@@ -51,25 +51,13 @@
         </button>
        <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to image_tag("Слой_мал3.png"), root_path %></li>
-               <li><%= link_to "Chat/Questions", messages_path  %></li>
-               <li><%= link_to "Orders", orders_path  %></li>
-               <li><%= link_to "+Products", products_path  %></li>
-               <li><%= link_to "Contact", contacts_path  %></li>
+            <li><%= link_to image_tag("Слой_мал3.png"), root_path, :class => "my4" %></li>
+               <li><%= link_to "Chat/Questions", messages_path, :class => "my"  %></li>
+               <li><%= link_to "Orders", orders_path, :class => "my1"  %></li>
+               <li><%= link_to "+Products", products_path, :class => "my2"  %></li>
+               <li><%= link_to "Contact", contacts_path, :class => "my3"  %></li>
                
-   	       <% if user_signed_in? %>
-                 <li class="loginn">
-                   <%= current_user.email %>
-                 </li>
-                 <li>
-                   <%= link_to('Logout',destroy_user_session_path, method: :delete) %></li>
-                 </li>
-
-               <% else %>
-                 <li>
-                 <%= link_to('Login', new_user_session_path) %>
-                 </li>
-               <% end %>
+   	       
              <li class="searchh">
             
 
@@ -80,6 +68,20 @@
 		<% end %>
 
              </li>
+
+               <% if user_signed_in? %>
+                 <li class="loginn">
+                   Logged in as <%= current_user.email.split("@").first %>
+                 </li>
+                 <li>
+                   <%= link_to('Logout',destroy_user_session_path, method: :delete) %></li>
+                 </li>
+
+               <% else %>
+                 <li>
+                 <%= link_to('Login', new_user_session_path) %>
+                 </li>
+               <% end %>
 	
 	  </ul>
         </div>
