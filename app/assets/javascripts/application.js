@@ -19,4 +19,11 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+$(function() { 
 
+  $(".form-controls input").keyup(function() {
+    $.get($(".form-controls").attr("action"), $(".form-controls").serialize(),null, "script");
+    return false;
+  });
+
+})

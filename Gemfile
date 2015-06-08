@@ -5,8 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.7'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'geocoder'
+gem 'nifty-generators'
+gem 'mp3_player'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'json', '~> 1.8.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -36,7 +40,7 @@ gem 'private_pub'
 gem 'whenever', :require => false
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -48,6 +52,7 @@ gem 'whenever', :require => false
 # gem 'debugger', group: [:development, :test]
 
 gem 'therubyracer'
+gem 'libv8', '3.16.14.7'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
@@ -59,3 +64,5 @@ group :test do
   gem 'factory_girl_rails'
   gem 'faker'
 end
+
+gem "mocha", group: :test
