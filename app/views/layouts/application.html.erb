@@ -55,7 +55,7 @@
                <li><%= link_to "Chat/Questions", messages_path  %></li>
                <li><%= link_to "Orders", orders_path  %></li>
                <li><%= link_to "+Products", products_path  %></li>
-               <li><%= link_to "Contact us", contacts_path  %></li>
+               <li><%= link_to "Contact", contacts_path  %></li>
                
    	       <% if user_signed_in? %>
                  <li class="loginn">
@@ -71,11 +71,16 @@
                  </li>
                <% end %>
              <li class="searchh">
-             <form>
-               <input type='text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Search' >
-             </form> 
-             </li>
+            
 
+                <%= form_tag root_path, :method => 'get', :class => "form-controls" do %>
+		  
+		    <%= text_field_tag :keyword, params[:keyword], :placeholder => "Search" %>
+		
+		<% end %>
+
+             </li>
+	
 	  </ul>
         </div>
       </div>
