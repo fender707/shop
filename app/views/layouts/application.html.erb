@@ -105,13 +105,13 @@
             <ul class="nav nav-list">
               <center><h4><li class="nav-header">Categories</li></h4></center>
   	       <% categories.each do |category| %>
-                 <li class='reload'><%= link_to category.name, root_path(filter: category.id) %></li>
+                 <li class='reload'><%= link_to category.name, root_path(filter: category.id), :class => 'my5' %></li>
                <% end %>
-               <center><li><%= link_to image_tag("Корзинка88x118.png"), root_path %></center><br/>
+               
 
                <center><h4><li class="nav-header">Music</li></h4></center>
                </br><%= mp3_player("https://github.com/fender707/band_stanza/blob/master/01.Stanza%20-%20Day%20and%20Night.mp3", :width => 200) %>
-
+               <center><li><%= link_to image_tag("Корзинка88x118.png"), root_path %></center><br/>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

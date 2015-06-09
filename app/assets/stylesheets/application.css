@@ -51,6 +51,14 @@ float: left;
   background: #F7819F;
   margin-right: 15px;
 }
+.my5 {
+  font: small-caps 16px/16px "TimesMew Roman" , serif;
+ 
+}
+
+.nav-header {
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
+}
 
 li.searchh {
   background: #F5A9F2;
