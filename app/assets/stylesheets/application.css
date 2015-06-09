@@ -54,15 +54,17 @@ float: left;
 
 li.searchh {
   background: #F5A9F2;
-  margin-top: 7px;
-  margin-left: 5px;
+  
+ 
   
 }
 
 li.searchh  input {
-    font: small-caps 18px/18px "TimesMew Roman" , serif;
+    font: small-caps 16px/16px "TimesMew Roman" , serif;
     width:200px;
-    height: 40px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
 li.loginn {
