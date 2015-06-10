@@ -94,6 +94,7 @@
   <script type="text/javascript">
     $('#something').animate({'margin-top':'5px','margin-left':'450px'},2000);
   </script>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
@@ -111,7 +112,9 @@
 
                <center><h4><li class="nav-header">Music</li></h4></center>
                </br><%= mp3_player("https://github.com/fender707/band_stanza/blob/master/01.Stanza%20-%20Day%20and%20Night.mp3", :width => 200) %>
-               <center><li><%= link_to image_tag("Корзинка88x118.png"), root_path %></center><br/>
+	       <div class="cart">
+                 <%= render @cart %>
+               </div>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
