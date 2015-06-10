@@ -31,6 +31,7 @@ float: left;
 .my {
   background: #58D3F7;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
+  margin-left: 5px;
 }
 
 .my1 {
@@ -48,19 +49,38 @@ float: left;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 }
 .my4 {
-  background: #F7819F;
+  
   margin-right: 15px;
+}
+.my5 {
+  font: small-caps 16px/16px "TimesMew Roman" , serif;
+ 
+}
+
+.nav-header {
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
 }
 
 li.searchh {
-  background: #F5A9F2;
-  margin-top: 9px;
-  margin-left: 5px;
+  background: #A9A9F2;
+  
+ 
+  
 }
+
+li.searchh  input {
+    font: small-caps 16px/16px "TimesMew Roman" , serif;
+    width:200px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
 li.loginn {
   background: #D8D8D8;
   margin-top: 15px;
   margin-left: 5px;
 }
+
+
 

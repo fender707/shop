@@ -5,6 +5,6 @@ class InfoController < ApplicationController
     else
       @products = Product.search(params[:keyword]).order("Created_at DESC").limit(5); 
     end
-   
+  @cart = current_cart
   end
 end
