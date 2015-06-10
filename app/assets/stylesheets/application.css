@@ -31,6 +31,7 @@ float: left;
 .my {
   background: #58D3F7;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
+  margin-left: 5px;
 }
 
 .my1 {
@@ -48,7 +49,7 @@ float: left;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 }
 .my4 {
-  background: #F7819F;
+  
   margin-right: 15px;
 }
 .my5 {
@@ -61,7 +62,7 @@ float: left;
 }
 
 li.searchh {
-  background: #F5A9F2;
+  background: #A9A9F2;
   
  
   
