@@ -7,6 +7,11 @@ $(function() {
     mode: 'horizontal'
   });
 
+  $(".entry > img").click(function() {
+    $(this).find(':submit').click();
+  });
+
+  $("#notice").hide();
 
 })
   

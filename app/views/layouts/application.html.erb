@@ -114,9 +114,11 @@
                </br><%= mp3_player("https://github.com/fender707/band_stanza/blob/master/01.Stanza%20-%20Day%20and%20Night.mp3", :width => 200) %>
 	        <center><h4><li class="nav-header">Your Cart</li></h4></center>
 	       <% if @cart %>
-   	        <div class="cart">
-		   <%= render @cart %>
-                </div>
+   	       <dic class="side">
+  	          <div class="cart">
+		     <%= render @cart %>
+                  </div>
+		</div>
                <% end %>
             </ul>
           </div><!--/.well -->
