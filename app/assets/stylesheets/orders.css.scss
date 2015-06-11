@@ -12,7 +12,7 @@
 }
 
 form {
-    
+     width: 400px;
     label {
       width: 5em;
       float: left;
@@ -27,11 +27,11 @@ form {
 	margin-left: 0.5em;
      }
    .actions {
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: center;
     }
    .submit {
-      
+      margin-top: 10px;
       margin-left: 6em;
     }
     br {
