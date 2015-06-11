@@ -12,7 +12,7 @@
 }
 
 form {
-     
+    
     label {
       width: 5em;
       float: left;
@@ -23,7 +23,8 @@ form {
      }
 
      select,textarea,input {
-       margin-left: 0.5em;
+	float: left;       
+	margin-left: 0.5em;
      }
    .actions {
     margin-top: 5px;
