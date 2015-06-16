@@ -1,0 +1,13 @@
+ <% @products.each do |product| %>
+
+    <%= image_tag(product.image_url) %>
+    <div class="one">
+    <h3><%= product.title %></h3>
+    <p class="desc"><%= sanitize(product.description) %></p>
+    </div>  
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(product.price) %>  
+      <%=button_to 'Add to Cart', line_items_path(product_id: product),remote: true %>
+      </div> 
+
+<% end %>

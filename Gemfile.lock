@@ -114,6 +114,7 @@ GEM
     minitest (5.5.0)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
+    mp3_player (0.1.1)
     multi_json (1.10.1)
     mysql2 (0.3.18)
     nifty-generators (0.4.6)
@@ -245,6 +246,7 @@ DEPENDENCIES
   less-rails
   libv8 (= 3.16.14.7)
   mocha
+  mp3_player
   mysql2 (~> 0.3.13)
   nifty-generators
   pg

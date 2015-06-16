@@ -28,13 +28,59 @@ float: left;
 }
 }
 
-li.searchh {
-  margin-top: 9px;
+.my {
+  background: #58D3F7;
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
   margin-left: 5px;
 }
 
+.my1 {
+  background: #F3F781;
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
+}
+
+.my2 {
+  background: #FAAC58;
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
+}
+
+.my3 {
+  background: #A9F5E1;
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
+}
+.my4 {
+  
+  margin-right: 15px;
+}
+.my5 {
+  font: small-caps 16px/16px "TimesMew Roman" , serif;
+ 
+}
+
+.nav-header {
+  font: small-caps 18px/18px "TimesMew Roman" , serif;
+}
+
+li.searchh {
+  background: #A9A9F2;
+  
+ 
+  
+}
+
+li.searchh  input {
+    font: small-caps 16px/16px "TimesMew Roman" , serif;
+    width:200px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
 li.loginn {
+  background: #D8D8D8;
   margin-top: 15px;
   margin-left: 5px;
 }
+
+
 

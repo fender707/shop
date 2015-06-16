@@ -3,8 +3,7 @@
   <thead>
     <tr>
       <th>Address</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,12 +12,13 @@
     <% @contacts.each do |contact| %>
       <tr>
         <td><%= contact.address %></td>
-        <td><%= contact.latitude %></td>
-        <td><%= contact.longitude %></td>
-        <td class="mapp"><%= link_to 'Show', contact %></td>
-        <div class="map"><%= image_tag "https://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{contact.latitude}%2C#{contact.longitude}" %></div>
+        <div class="map"><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284" %></div>
       </tr>
     <% end %>
+  <h5><b>Telephone:</b> +380974204245</h5>
+
   </tbody>
 </table>
 
