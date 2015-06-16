@@ -1,0 +1,26 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.address %></td>
+        <td><%= contact.latitude %></td>
+        <td><%= contact.longitude %></td>
+        <td class="mapp"><%= link_to 'Show', contact %></td>
+        <div class="map"><%= image_tag "https://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{contact.latitude}%2C#{contact.longitude}" %></div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
