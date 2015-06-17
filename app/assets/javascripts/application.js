@@ -20,7 +20,7 @@
 //= require_tree .
 
 $(function() { 
-
+  $("#notice").hide();
   $(".form-controls input").keyup(function() {
     $.get($(".form-controls").attr("action"), $(".form-controls").serialize(),null, "script");
     return false;

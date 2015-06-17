@@ -14,7 +14,7 @@
 form {
      
     label {
-      width: 5em;
+      width: 25em;
       float: left;
       text-align: left;
       padding-top: 0.2em;
@@ -23,14 +23,15 @@ form {
      }
 
      select,textarea,input {
-       margin-left: 0.5em;
+	float: left;       
+	margin-left: 0.5em;
      }
    .actions {
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: center;
     }
    .submit {
-      
+      margin-top: 10px;
       margin-left: 6em;
     }
     br {
@@ -46,7 +47,4 @@ td{
   padding: 5px 0px 5px 3px;
 }
 
-table, th, td {
 
-  
-}

@@ -82,5 +82,28 @@ li.loginn {
   margin-left: 5px;
 }
 
+.side {
+  
+  form, div {
+    display: inline;
+  }
+
+  input {
+    font-size: small;
+  }
+
+  .cart {
+     font-size: smaller;
+     color: black;
+  
+     table {
+        border-top: 1px dotted #595;
+	border-bottom: 1px dotted #595;
+	border-bottom: 10px;
+
+     }
+  }
+
+}
 
 

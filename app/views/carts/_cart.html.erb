@@ -3,12 +3,17 @@
     <%= render(cart.line_items) %>
     <tr class="total_line">
       <td colspan="2">Total</td>
-      <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>   
+      <% if cart.total_price == cart.action_price %>
+        <td class="total_cell"><b><%= number_to_currency(cart.total_price) %></b></td>
+      <% else %>  
+        <td class="total_cell"><s><%= number_to_currency(cart.total_price) %></s></td> 
+        <td class="action_cell"><b><%= number_to_currency(cart.action_price) %></b></td>  
+      <% end %> 
     </tr>
   </table>
+  <center>Save: <%= number_to_currency(cart.total_price - cart.action_price) %></center>
 
-
-<div class="price_line">
-  <%= button_to  "Checkout", new_order_path, method: :get %>
-  <%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?' %>
-</div>
+  <div class="inline_button">
+    <%= button_to  "Checkout", new_order_path, method: :get %>
+    <%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?' %>
+   </div>
