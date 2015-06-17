@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
        resources :products
        resources :carts
-       resources :line_items, only: [:create]
+       resources :line_items, only: [:create,:destroy]
        resources :orders
        resources :messages
   #   end

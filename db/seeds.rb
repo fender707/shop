@@ -14,6 +14,8 @@ music_category = Category.create!(name: 'Music')
 shoping_category = Category.create!(name: 'Shoping')
 drink_category = Category.create!(name: 'Drink')
 book_category = Category.create!(name: 'Books')
+tea_category = Category.create!(name: 'Tea')
+coffee_category = Category.create!(name: 'Coffee')
 
 Product.create!([
 {  
@@ -140,7 +142,36 @@ Product.create!([
   count: 10,
   category: book_category
 
-}
+},
 
+{
+  title: "Black Tea",
+  description: "Delicius and strong tea for real man",
+  image_url: "black_tea.jpeg",
+  price: "8" ,
+  count: 100,
+  category: tea_category
+
+},
+
+{
+  title: "Green Tea",
+  description: "Delicius and strong tea for real man.",
+  image_url: "green_tea.jpeg",
+  price: "7" ,
+  count: 100,
+  category: tea_category
+
+},
+
+{
+  title: "Efiopia Harrar",
+  description: "Delicius coffee, unforgetable taste.",
+  image_url: "efiopia_harrar.jpg",
+  price: "12" ,
+  count: 100,
+  category: coffee_category
+
+}
 
 ])
