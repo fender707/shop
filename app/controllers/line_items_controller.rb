@@ -12,4 +12,17 @@ class LineItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @cart = current_cart
+    @line_item = LineItem.find(params[:id])
+    
+    @line_item.destroy
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to @line_item.cart }
+        format.js
+      end
+    end
+  end
+
 end
