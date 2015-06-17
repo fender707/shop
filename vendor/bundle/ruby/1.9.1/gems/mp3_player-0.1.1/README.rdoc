@@ -1,0 +1,55 @@
+= Mp3Player
+
+Here's a WordPress Audio Player plugin wrapper for Rails 3.x with asset pipeline support.
+
+== Installation
+
+Simply add to your application's Gemfile:
+  gem 'mp3_player'
+
+In your layout add:
+  <%= mp3_player_headers %>
+
+or:
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' %>
+  <%= mp3_player_headers without_swfobject: true %>
+
+== Usage
+
+To check the player is working simply add:
+  <%= mp3_player("http://github.com/sekrett/mp3_player/raw/master/test.mp3") %>
+to your view.
+
+If you're using paperclip or carrierwave:
+  <%= mp3_player @my_model.mp3.url %>
+
+Additionally you can just use google's MP3 player with the following helper:
+  <%= google_mp3_player @my_model.mp3.url %>
+
+== Customization
+
+You may specify extra options (all colors should be expressed as hexadecimal values minus the '#'. eg.:
+  <%= mp3_player @my_model.mp3.url, { bg: "99FFFF", text: 'FF0000') %>
+
+Also you may create a configuration yml file and set global options there:
+  rails generate mp3_player:yml
+
+For a complete list of options see documentation at http://wpaudioplayer.com/standalone.
+
+== Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+== Copyright
+
+This plugin is based on the Audio Player 2.0 by Martin Laine (http://wpaudioplayer.com/standalone)
+
+Thanks to Matt Ittigson (http://github.com/mattenat) for inspiring changes to help support paperclip.
+
+Copyright © 2009 Gavin Morrice (http://handyrailstips.com), released under the MIT license
+
+Copyright © 2010-2013 Alexander Zubkov (http://github.com/sekrett), released under the MIT license
