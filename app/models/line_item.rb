@@ -8,9 +8,9 @@ class LineItem < ActiveRecord::Base
   end
 
   def action_price
-    if product.title == "Efiopia Harrar" && quantity > 1 then
+    if product.title == "Efiopia Harrar(-50% for 2 and more)" && quantity > 1 then
       product.price * quantity / 2
-    elsif (product.title == "Green Tea" || product.title == "Black Tea") && quantity > 2 then
+    elsif (product.title == "Green Tea(-2$ for 3 and more)" || product.title == "Black Tea") && quantity > 2 then
       product.price * quantity - 2
     else
       product.price * quantity
