@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :contacts
-
+  resources :contacts, :paintings
+  
   devise_for :users
   get 'info/index'
 

@@ -1,0 +1,12 @@
+find_executable: checking for gcc... -------------------- yes
+
+--------------------
+
+find_executable: checking for Magick-config... -------------------- no
+
+--------------------
+
+find_executable: checking for pkg-config... -------------------- yes
+
+--------------------
+

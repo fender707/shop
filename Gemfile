@@ -7,9 +7,9 @@ gem 'rails', '4.1.7'
 gem 'pg'
 gem 'geocoder'
 gem 'nifty-generators'
-
+gem 'carrierwave'
 gem 'mp3_player'
-
+gem 'rmagick', '~> 2.15.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'json', '~> 1.8.2'

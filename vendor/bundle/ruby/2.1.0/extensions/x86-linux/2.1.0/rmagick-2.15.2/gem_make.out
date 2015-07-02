@@ -1,0 +1,36 @@
+/home/ubuntu/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20150702-3377-ibaljz.rb extconf.rb 
+checking for gcc... yes
+checking for Magick-config... no
+checking for pkg-config... yes
+checking for outdated ImageMagick version (<= 6.4.9)... *** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/ubuntu/.rvm/rubies/ruby-2.1.4/bin/ruby
+extconf.rb:79:in ``': No such file or directory - convert (Errno::ENOENT)
+	from extconf.rb:79:in `block in configure_compile_options'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:918:in `block in checking_for'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/mkmf.rb:917:in `checking_for'
+	from extconf.rb:76:in `configure_compile_options'
+	from extconf.rb:15:in `initialize'
+	from extconf.rb:474:in `new'
+	from extconf.rb:474:in `<main>'
+
+extconf failed, exit code 1

@@ -32,6 +32,11 @@ GEM
     bcrypt (3.1.9)
     builder (3.2.2)
     bxslider-rails (4.1.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     chronic (0.10.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -232,6 +237,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bxslider-rails
+  carrierwave
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
@@ -266,6 +272,3 @@ DEPENDENCIES
   webmock
   whenever
   will_paginate
-
-BUNDLED WITH
-   1.10.0.rc
