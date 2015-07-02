@@ -6,6 +6,14 @@ class PaintingsController < ApplicationController
     @painting = Painting.all
   end
 
+  def create
+    @painting = Painting.create(params[:painting])
+  end
+
+  def new
+    @painting = Painting.new
+  end
+
   private
 
   def paint_params

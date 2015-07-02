@@ -1,9 +1,8 @@
-
-  <table>
-    <tr>
-      <td colspan="2">Total</td>
-        <td><b><%= painting.name %></b></td>
-        <td><%= painting.review %></td> 
-        <td><b><%= painting.image %></b></td>  
-    </tr>
-  </table>
+<div class="painting">
+  <%= link_to image_tag(painting.image_url(:thump)), painting if painting.image %>
+  <div class="name"><%= painting.name %></div>
+  <div class="actions">
+    <%= link_to "edit", edit_painting_path(painting) %>
+    <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+</div>

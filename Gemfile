@@ -10,6 +10,8 @@ gem 'nifty-generators'
 gem 'carrierwave'
 gem 'mp3_player'
 gem 'rmagick', '~> 2.15.2'
+gem 'sprockets-helpers'
+gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'json', '~> 1.8.2'
@@ -52,7 +54,7 @@ gem 'bcrypt'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'jasmine', group: [:development, :test]
 gem 'therubyracer'
 gem 'libv8', '3.16.14.7'
 gem 'less-rails'
