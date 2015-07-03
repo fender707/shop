@@ -1,8 +1,6 @@
 <div class="painting">
+  <%= painting.title %>
   <%= link_to image_tag(painting.image), painting if painting.image %>
   <div class="name"><%= painting.name %></div>
-  <div class="actions">
-    <%= link_to "edit", edit_painting_path(painting) %>
-    <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
-  </div>
+  <div class="review"><%= painting.review %></div>
 </div>
