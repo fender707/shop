@@ -3,11 +3,14 @@ class PaintingsController < ApplicationController
   before_action :paint_params, only: [:show, :create, :update, :destroy]
 
   def index
-    @painting = Painting.all
+    @paintings = Painting.all
   end
 
   def create
-    @painting = Painting.create(params[:painting])
+    @painting = Painting.create(paint_params)
+    if @painting.save 
+      redirect_to paintings_path
+    end
   end
 
   def new

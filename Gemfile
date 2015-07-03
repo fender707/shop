@@ -11,7 +11,7 @@ gem 'carrierwave'
 gem 'mp3_player'
 gem 'rmagick', '~> 2.15.2'
 gem 'sprockets-helpers'
-gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'json', '~> 1.8.2'
