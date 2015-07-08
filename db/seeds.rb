@@ -8,7 +8,7 @@
 
 Product.destroy_all
 Category.destroy_all
-
+Painting.destroy_all
 foto_category = Category.create!(name: 'Foto')
 music_category = Category.create!(name: 'Music')
 shoping_category = Category.create!(name: 'Shoping')

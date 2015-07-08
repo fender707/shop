@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :contacts, :paintings
+
+  resources :contacts
   
   devise_for :users
   get 'info/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
    root 'info#index'
 
@@ -56,6 +56,7 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
+       resources :paintings
        resources :products
        resources :carts
        resources :line_items, only: [:create,:destroy]
