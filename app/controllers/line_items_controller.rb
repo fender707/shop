@@ -7,7 +7,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to @line_item.cart }
-        format.js
+        format.js { @current_item = @line_item }
       end
     end
   end
@@ -20,7 +20,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to @line_item.cart }
-        format.js
+        format.js 
       end
     end
   end
