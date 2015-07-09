@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  resources :paintings
+  match "painting/new" => "painting#new", via: [:get]
   resources :contacts
   
   devise_for :users
@@ -56,7 +57,7 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-       resources :paintings
+       
        resources :products
        resources :carts
        resources :line_items, only: [:create,:destroy]
