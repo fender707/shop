@@ -1,6 +1,6 @@
 <div class="painting">
-  <%= painting.title %>
-  <%= link_to image_tag(painting.image), painting if painting.image %>
+  <h4>From: <b><%= painting.title %></b></h4>
   <div class="name"><%= painting.name %></div>
+  <%= image_tag(painting.image) %>
   <div class="review"><%= painting.review %></div>
 </div>

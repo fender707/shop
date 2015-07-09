@@ -8,7 +8,7 @@
 
 Product.destroy_all
 Category.destroy_all
-
+Painting.destroy_all
 foto_category = Category.create!(name: 'Foto')
 music_category = Category.create!(name: 'Music')
 shoping_category = Category.create!(name: 'Shoping')
@@ -155,7 +155,7 @@ Product.create!([
 },
 
 {
-  title: "Green Tea",
+  title: "Green Tea(-2$ for 3 and more)",
   description: "Delicius and strong tea for real man.",
   image_url: "green_tea.jpeg",
   price: "7" ,
@@ -165,7 +165,7 @@ Product.create!([
 },
 
 {
-  title: "Efiopia Harrar",
+  title: "Ethiopian Harrar(-50% for 2 and more)",
   description: "Delicius coffee, unforgetable taste.",
   image_url: "efiopia_harrar.jpg",
   price: "12" ,

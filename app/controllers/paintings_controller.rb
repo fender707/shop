@@ -9,14 +9,16 @@ class PaintingsController < ApplicationController
   def create
     @painting = Painting.create(paint_params)
     @painting.title = current_user.email
-    if @painting.save 
+    if @painting.save! 
       redirect_to paintings_path
     end
   end
 
   def destroy
+    @painting = Painting.find(params[:id])
+    @painting.title = current_user.email
     @painting.destroy
-    redirect_to paintings_path
+    redirect_to root_path
   end
 
   def new
@@ -24,6 +26,8 @@ class PaintingsController < ApplicationController
   end
 
   private
+
+  
 
   def paint_params
     params.require(:painting).permit(:title, :name, :review, :image)
