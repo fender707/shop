@@ -9,6 +9,9 @@ class Product < ActiveRecord::Base
 
   before_save :set_keywords
 
+  def self.latest
+    Product.order(:updated_at).last
+  end
 
   def self.search(keyword)
     if keyword.present?
