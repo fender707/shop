@@ -7,12 +7,10 @@ class MessagesController < ApplicationController
   end
 
   def create  
-    
     @message = Message.new(message_params)
     @message.user_id = current_user.id
     @message.title = current_user.email
     @message.save!
-    
   end
   
   def delete_dialogue
