@@ -14,6 +14,6 @@
   <center>Save: <%= number_to_currency(cart.total_price - cart.action_price) %></center>
 
   <div class="inline_button">
-    <%= button_to  "Checkout", new_order_path, method: :get %>
-    <%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?' %>
+    <%= button_to  "Checkout", new_order_path, method: :get, :class => 'btn btn-success'  %>
+    <%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?',:class => 'btn btn-danger' %>
    </div>
