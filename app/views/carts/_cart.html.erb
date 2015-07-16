@@ -13,7 +13,7 @@
   </table>
   <% if (cart.total_price - cart.action_price) > 0 %>
     <center>
-      <h4>Save: <%= number_to_currency(cart.total_price - cart.action_price) %></h4>
+      <h5>Save: <%= number_to_currency(cart.total_price - cart.action_price) %></h5>
     </center>
   <% end %>
   <div class="inline_button">
