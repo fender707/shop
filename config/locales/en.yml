@@ -31,4 +31,7 @@ en:
       search: "Search"
       logout: "Logout"
       login:  "Login"
+      categories: "Categories"
+      music: "Music"
+      cart: "Your Cart"
 

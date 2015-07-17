@@ -26,8 +26,7 @@ module Shop
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
-        LANGUAGES = [['English', 'en'],
-                ['Russian', 'ru']]
+
     config.autoload_paths += %W(#{config.root}/uploaders)
     config.generators do |g|
      g.test_framework :rspec,view_specs: false,

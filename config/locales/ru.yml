@@ -9,5 +9,9 @@ ru:
        search: "Поиск"
        logout: "Выйти"
        login:  "Логин"
+       categories: "Категории"
+       music: "Музыка"
+       cart: "Ваша корзина"
+       
 
  

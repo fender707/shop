@@ -1,4 +1,4 @@
 LANGUAGES = [
-  ['English', 'en'],
-  ['Russian', 'ru']
+  ['EN', 'en'],
+  ['RU', 'ru']
 ]
