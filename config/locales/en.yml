@@ -34,4 +34,12 @@ en:
       categories: "Categories"
       music: "Music"
       cart: "Your Cart"
+  info: 
+    products:
+      add_html: "Add to Cart"
+
+  carts: 
+    cart:
+      empty: "Empty cart"
+      checkout: "Checkout"
 
