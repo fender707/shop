@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_for(@order) do |f| %>
+<%= form_for(@order, :class => 'form-horizontal') do |f| %>
   <% if @order.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@order.errors.count, "error") %> prohibited this rorde from being saved:</h2>
@@ -11,20 +11,20 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :name %><br /> 
-    <%= f.text_field :name,size: 40 %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-sm-2' %><br /> 
+    <%= f.text_field :name, :class => 'form-control', size: 40 %>
   </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_area :address,size: 40, rows: 3,cols: 38 %>
+  <div class="form-group">
+    <%= f.label :address, :class => 'control-label col-sm-2' %><br />
+    <%= f.text_area :address, :class => 'form-control', size: 40, rows: 3,cols: 38 %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email,size: 40 %>
+  <div class="form-group">
+    <%= f.label :email, :class => 'control-label col-sm-2' %><br />
+    <%= f.text_field :email, size: 40, :class => 'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit 'Place Order' %><br />
+  <div class="form-group">
+    <%= f.submit 'Place Order', :class => 'btn btn-default' %><br />
   </div>
 
 <% end %>
