@@ -31,7 +31,18 @@ float: left;
 .my {
   background: #58D3F7;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
-  margin-left: 5px;
+
+}
+
+.locale {
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.btn-primary{
+  font: small-caps 12px/12px "TimesMew Roman" , serif;
 }
 
 .my1 {
@@ -80,7 +91,9 @@ li.loginn {
   background: #D8D8D8;
   margin-top: 15px;
   margin-left: 5px;
+  margin-right: 5px;
 }
+
 
 .side {
   
