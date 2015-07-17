@@ -1,0 +1,17 @@
+ru:
+   layouts: 
+     application: 
+       chat: "Чат"
+       orders: "Заказы"
+       products: "+Товары"
+       contacts: "Контакты"
+       uploads: "Отзывы"
+       search: "Поиск"
+       logout: "Выйти"
+       login:  "Логин"
+       categories: "Категории"
+       music: "Музыка"
+       cart: "Ваша корзина"
+       
+
+ 

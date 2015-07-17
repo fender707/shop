@@ -53,36 +53,45 @@
        <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to image_tag("Слой_мал3.png"), root_path, :class => "my4" %></li>
-               <li><%= link_to "Chat", messages_path, :class => "my"  %></li>
-               <li><%= link_to "Orders", orders_path, :class => "my1"  %></li>
-               <li><%= link_to "+Products", products_path, :class => "my2"  %></li>
-               <li><%= link_to "Contact", contacts_path, :class => "my3"  %></li>  
-	       <li><%= link_to "Uploads/Reviews", paintings_path, :class => "my2"  %></li> 	       
+               <li><%= link_to t('.chat'), messages_path, :class => "my"  %></li>
+               <li><%= link_to t('.orders'), orders_path, :class => "my1"  %></li>
+               <li><%= link_to t('.products'), products_path, :class => "my2"  %></li>
+               <li><%= link_to t('.contacts'), contacts_path, :class => "my3"  %></li>  
+	       <li><%= link_to t('.uploads'), paintings_path, :class => "my2"  %></li> 	       
              <li class="searchh">
             
 
                 <%= form_tag root_path, :method => 'get', :class => "form-controls" do %>
 		  
-		    <%= text_field_tag :keyword, params[:keyword], :placeholder => "Search" %>
+		    <%= text_field_tag :keyword, params[:keyword], :placeholder => t('.search') %>
 		
 		<% end %>
 
              </li>
 
                <% if user_signed_in? %>
-                 <li class="loginn">
+                 <li>
+                   <%= link_to(t('.logout') ,destroy_user_session_path, method: :delete, :class => "my") %></li>
+                 </li>
+		 <li class="loginn">
                    Logged in as <%= current_user.email.split("@").first %>
                  </li>
-                 <li>
-                   <%= link_to('Logout',destroy_user_session_path, method: :delete, :class => "my") %></li>
-                 </li>
-
                <% else %>
                  <li>
-                 <%= link_to('Login', new_user_session_path, :class => "my") %>
+                 <%= link_to(t('.login'), new_user_session_path, :class => "my") %>
                  </li>
                <% end %>
 	
+ 	       <%= form_tag root_path, :class => "locale" do %>
+		    <%= select_tag 'set_locale',
+		        options_for_select(LANGUAGES, I18n.locale.to_s),
+			onchange: 'this.form.submit()', :class => 'btn btn-default' %>
+		    <%= submit_tag 'submit' %>
+		    <%= javascript_tag "$('.locale input').hide()" %>
+               <% end %>
+		
+		
+
 	  </ul>
         </div>
       </div>
@@ -94,20 +103,20 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+
         <div class="col-lg-3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <center><h4><li class="nav-header">Categories</li></h4></center>
+              <center><h4><li class="nav-header"><%= t('.categories') %></li></h4></center>
   	       <% categories.each do |category| %>
                  <li class='reload'><%= link_to category.name, root_path(filter: category.id), :class => 'my5' %></li>
                <% end %>
                
-
-               <center><h4><li class="nav-header">Music</li></h4></center>
+               <center><h4><li class="nav-header"><%= t('.music') %></li></h4></center>
                <%= mp3_player("https://github.com/fender707/band_stanza/blob/master/01.Stanza%20-%20Day%20and%20Night.mp3", :width => 200) %>
 	         <center>
 		   <h4>
-		     <li class="nav-header">Your Cart</li>
+		     <li class="nav-header"><%= t('.cart') %></li>
 		   </h4>
 		 </center>
 	       <% if @cart %>
