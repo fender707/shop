@@ -5,7 +5,7 @@ ru:
        orders: "Заказы"
        products: "+Товары"
        contacts: "Контакты"
-       uploads: "Загрузки/Отзывы"
+       uploads: "Отзывы"
        search: "Поиск"
        logout: "Выйти"
        login:  "Логин"

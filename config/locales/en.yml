@@ -27,7 +27,7 @@ en:
       orders: "Orders"
       products: "+Products"
       contacts: "Contacts"
-      uploads: "Uploads/Reviews"
+      uploads: "Uploads"
       search: "Search"
       logout: "Logout"
       login:  "Login"
