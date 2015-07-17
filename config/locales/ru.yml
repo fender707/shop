@@ -1,0 +1,13 @@
+ru:
+   layouts: 
+     application: 
+       chat: "Чат"
+       orders: "Заказы"
+       products: "+Товары"
+       contacts: "Контакты"
+       uploads: "Загрузки/Отзывы"
+       search: "Поиск"
+       logout: "Выйти"
+       login:  "Логин"
+
+ 

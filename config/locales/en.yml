@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  layouts: 
+    application: 
+      chat: "Chat"
+      orders: "Orders"
+      products: "+Products"
+      contacts: "Contacts"
+      uploads: "Uploads/Reviews"
+      search: "Search"
+      logout: "Logout"
+      login:  "Login"
+

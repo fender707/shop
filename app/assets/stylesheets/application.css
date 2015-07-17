@@ -34,6 +34,11 @@ float: left;
   margin-left: 5px;
 }
 
+.locale {
+  float: right;
+  margin: -0.25em 0.1em;
+}
+
 .my1 {
   background: #F3F781;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
