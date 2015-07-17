@@ -12,6 +12,14 @@ ru:
        categories: "Категории"
        music: "Музыка"
        cart: "Ваша корзина"
+   info: 
+     products:
+       add_html: "Добавить в корзину"
+
+   carts: 
+     cart:
+       empty: "Очистить"
+       checkout: "Оформить"
        
 
  
