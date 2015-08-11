@@ -5,6 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
 
 Product.destroy_all
 Category.destroy_all
@@ -16,6 +18,20 @@ drink_category = Category.create!(name: 'Drink')
 book_category = Category.create!(name: 'Books')
 tea_category = Category.create!(name: 'Tea')
 coffee_category = Category.create!(name: 'Coffee')
+
+CSV.foreach(Rails.root.join("countries.csv"), headers: true) do |row|
+  Country.create! do |country|
+    country.id = row[0]
+    country.name = row[1]
+  end
+end
+
+CSV.foreach(Rails.root.join("states.csv"), headers: true) do |row|
+  State.create! do |state|
+    state.name = row[0]
+    state.country_id = row[2]
+  end
+end
 
 Product.create!([
 {  

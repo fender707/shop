@@ -16,6 +16,14 @@
     <%= f.text_field :name, :class => 'form-control', size: 40 %>
   </div>
   <div class="form-group">
+    <%= f.label :country_id, :class => 'control-label col-sm-2' %><br />
+    <%= f.collection_select :country_id, Country.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :state_id, :class => 'control-label col-sm-2' %><br />
+    <%= f.collection_select :state_id, State.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="form-group">
     <%= f.label :address, :class => 'control-label col-sm-2' %><br />
     <%= f.text_area :address, :class => 'form-control', size: 40, rows: 3,cols: 38 %>
   </div>
