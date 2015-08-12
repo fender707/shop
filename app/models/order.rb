@@ -1,6 +1,7 @@
 class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
-
+  belongs_to :country
+  belongs_to :state
   validates :name, :address, :email, presence: true
 
   def add_line_items_from_cart(cart)
