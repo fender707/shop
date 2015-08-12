@@ -1,5 +1,4 @@
 jQuery ->
-  $('#order_state_id').parent().hide()
   states = ('#order_state_id').html()
   $('#order_country_id').change ->
     country = $('#order_country_id :selected').text()
