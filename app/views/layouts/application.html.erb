@@ -106,14 +106,11 @@
   	       <% categories.each do |category| %>
                  <li class='reload'><%= link_to category.name, root_path(filter: category.id), :class => 'my5' %></li>
                <% end %>
-               
-               <center><h4><li class="nav-header"><%= t('.music') %></li></h4></center>
-               <%= mp3_player("https://github.com/fender707/band_stanza/blob/master/01.Stanza%20-%20Day%20and%20Night.mp3", :width => 200) %>
-	         <center>
-		   <h4>
-		     <li class="nav-header"><%= t('.cart') %></li>
-		   </h4>
-		 </center>
+	       <center>
+		 <h4>
+		   <li class="nav-header"><%= t('.cart') %></li>
+		 </h4>
+	       </center>
 	       <% if @cart %>
    	       <div class="side">
   	          <div class="cart">
