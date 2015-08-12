@@ -54,6 +54,6 @@ before_action :find_order, only: [:show,:destroy,:edit]
   end
 
   def order_params
-    params.require(:order).permit(:name, :address, :email)
+    params.require(:order).permit(:name, :address, :email, :country_id, :state_id)
   end
 end
