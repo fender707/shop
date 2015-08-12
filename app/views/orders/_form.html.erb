@@ -17,11 +17,11 @@
   </div>
   <div class="form-group">
     <%= f.label :country_id, :class => 'control-label col-sm-2' %><br /> 
-    <%= f.collection_select :country_id, Country.order(:name), :id, :name, include_blank: true, :class => 'btn btn-default', size: 40 %>
+    <%= f.collection_select :country_id, Country.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="form-group">
     <%= f.label :state_id, :class => 'control-label col-sm-2' %><br /> 
-    <%= f.grouped_collection_select :state_id, Country.order(:name), :states, :name, :id, :name, include_blank: true, :class => 'btn btn-default', size: 40 %>
+    <%= f.grouped_collection_select :state_id, Country.order(:name), :states, :name, :id, :name, include_blank: true %>
   </div>
 
   <div class="form-group">
