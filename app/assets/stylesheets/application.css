@@ -27,6 +27,9 @@ img {
 float: left;
 }
 }
+.twitter {
+  padding-top: 5px;
+}
 
 .my {
   background: #58D3F7;

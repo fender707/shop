@@ -8,6 +8,7 @@
       <th>State</th>
       <th>Address</th>
       <th>Email</th>
+      <th>PDF</th>
       <th class="offset">Destroy</th>
 
   </tr>
@@ -19,6 +20,7 @@
     <td><%= order.state_id %></td>
     <td><%= order.address %></td>
     <td><%= order.email %></td>
+    <td><%= link_to "Printable Receipt (PDF)", order_path(order, format: "pdf") %></td>
     <td><%= link_to 'Destroy',order, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
