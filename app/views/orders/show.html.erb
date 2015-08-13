@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+  <p>
+    <b> Name:</b>
+    <%= @order.name %>
+  </p>
+  <p>
+    <b>Address:</b>
+    <%= @order.address %>
+  </p>
+  <p>
+    <b>email:</b>
+    <%= @order.email %>
+  </p>
+  <p>
+    <b>Country_id:</b>
+    <%= @order.country_id %>
+  </p>
+  <p>
+    <b>State_id:</b>
+    <%= @order.state_id %>
+  </p>
+<%= link_to "Printable Receipt (PDF)", order_path(@order, format: "pdf") %><br />
+<%= link_to 'Back', orders_path %>
