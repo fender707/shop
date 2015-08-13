@@ -132,8 +132,14 @@ GEM
     mysql2 (0.3.18)
     nifty-generators (0.4.6)
     orm_adapter (0.5.0)
+    pdf-core (0.4.0)
     pg (0.17.1)
     phantomjs (1.9.8.0)
+    prawn (1.3.0)
+      pdf-core (~> 0.4.0)
+      ttfunk (~> 1.4.0)
+    prawn-table (0.2.2)
+      prawn (>= 1.3.0, < 3.0.0)
     private_pub (1.0.3)
       faye
     rack (1.5.2)
@@ -219,6 +225,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    ttfunk (1.4.0)
     turbolinks (2.5.3)
       coffee-rails
     twitter-bootstrap-rails (3.2.0)
@@ -270,6 +277,8 @@ DEPENDENCIES
   mysql2 (~> 0.3.13)
   nifty-generators
   pg
+  prawn (~> 1.3.0)
+  prawn-table
   private_pub
   rails (= 4.1.7)
   rmagick (~> 2.15.2)

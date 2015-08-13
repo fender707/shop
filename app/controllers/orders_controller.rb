@@ -4,6 +4,20 @@ before_action :find_order, only: [:show,:destroy,:edit]
   def index 
     @orders = Order.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
   end
+
+  def show
+    @order = Order.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+         pdf = OrderPdf.new(@order)
+         send_data pdf.render, filename: "order_#{@order.id}.pdf",
+   			       type: "application/pdf",
+			       disposition: "inline"
+      end
+    end
+  end
+
   def create 
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(current_cart)
