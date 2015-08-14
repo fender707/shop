@@ -17,11 +17,11 @@
  */
 
 #banner {
-background: #E8E8E8;
+background: #07BBFF;
 padding: 1px;
-border-bottom: 1px solid ;
-font: small-caps 25px/25px "TimesMew Roman" , serif;
-color: #787878;
+border-bottom: 0.5px solid ;
+font: small-caps 20px/20px "TimesMew Roman" , serif;
+color: #555;
 text-align: center;
 img {
 float: left;
@@ -32,7 +32,7 @@ float: left;
 }
 
 .my {
-  background: #58D3F7;
+  /*background: #58D3F7; */
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 
 }
@@ -49,17 +49,17 @@ float: left;
 }
 
 .my1 {
-  background: #F3F781;
+  /*background: #F3F781;*/
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 }
 
 .my2 {
-  background: #FAAC58;
+  /*background: #FAAC58; */
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 }
 
 .my3 {
-  background: #A9F5E1;
+  /*background: #A9F5E1; */
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 }
 .my4 {
@@ -76,7 +76,7 @@ float: left;
 }
 
 li.searchh {
-  background: #A9A9F2;
+  /*background: #A9A9F2; */
   
  
   
@@ -84,14 +84,14 @@ li.searchh {
 
 li.searchh  input {
     font: small-caps 16px/16px "TimesMew Roman" , serif;
-    width:150px;
+    width:180px;
     height: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
 li.loginn {
-  background: #D8D8D8;
+  background: #049cdb;
   margin-top: 15px;
   margin-left: 5px;
   margin-right: 5px;
