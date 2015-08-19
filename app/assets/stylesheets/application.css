@@ -31,6 +31,10 @@ float: left;
   padding-top: 5px;
 }
 
+.form-control {
+  width: 300px;
+}
+
 .my {
   /*background: #58D3F7; */
   font: small-caps 18px/18px "TimesMew Roman" , serif;
