@@ -1,4 +1,12 @@
+require 'api_constraints'
+
 Rails.application.routes.draw do
+  namespace :api, defaults: { format: 'json' } do
+    scope module: :v1, constraints: ApiConstraints.new(default: true) do
+      resources :products
+    end
+  end
+
   resources :paintings
   match "painting/new" => "painting#new", via: [:get]
   resources :contacts
