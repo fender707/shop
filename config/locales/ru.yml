@@ -12,6 +12,8 @@ ru:
        categories: "Категории"
        music: "Музыка"
        cart: "Ваша корзина"
+       weather: "Погода"
+       khmelnitsky: "Хмельницкий"
    info: 
      products:
        add_html: "Добавить в корзину"

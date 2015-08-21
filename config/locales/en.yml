@@ -34,6 +34,8 @@ en:
       categories: "Categories"
       music: "Music"
       cart: "Your Cart"
+      weather: "Weather"
+      khmelnitsky: "Khmelnitsky"
   info: 
     products:
       add_html: "Add to Cart"
