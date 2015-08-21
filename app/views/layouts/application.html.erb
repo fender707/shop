@@ -93,11 +93,12 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <center><h4><li class="nav-header"><%= t('.categories') %></li></h4></center>
-  	       <% categories.each do |category| %>
-                 <li class='reload'><%= link_to category.name, root_path(filter: category.id), :class => 'my5' %></li>
-               <% end %>
-              <center><h4><li class="nav-header">Weather</li></h4></center>
-	       <% weather %>
+  	        <% categories.each do |category| %>
+                  <li class='reload'><%= link_to category.name, root_path(filter: category.id), :class => 'my5' %></li>
+                <% end %>
+              <center><h5><li class="nav-header">Weather</li></h5>
+	      <li class="nav-header"><h6>Khmelnitsky</h6></li>
+	      <%= weather %></center>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
