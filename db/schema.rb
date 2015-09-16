@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20150811131011) do
 
   create_table "paintings", force: true do |t|
     t.string   "name"
-    t.text     "review"
     t.string   "image"
+    t.text     "review"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20150811131011) do
 
   create_table "products", force: true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.integer  "count"
     t.decimal  "price"
     t.integer  "category_id"
