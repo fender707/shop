@@ -1,39 +1,50 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-      <ul>  
-      <% @product.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for(new_product) do |f| %>
+
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <a class="close" style="padding-top: 15px;" data-dismiss="modal">×</a>
+      <h1>New Product</h1>
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :title %><br /> 
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, rows: 4 %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br />
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
+    <div class="modal-body">
+      <div class="field">
+        <%= f.label :title %><br /> 
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description, rows: 4 %>
+      </div>
+      <div class="field">
+        <%= f.label :image_url %><br />
+        <%= f.text_field :image_url %>
+      </div>
+      <div class="field">
+        <%= f.label :price %><br />
+        <%= f.text_field :price %>
+      </div>
 
-  <div class="field">
-    <%= f.label :count %><br /> 
-    <%= f.text_field :count %>
-  </div>
+      <div class="field">
+        <%= f.label :count %><br /> 
+        <%= f.text_field :count %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %><br />
-  </div>
-<%= link_to 'Back', products_path %>
-</div>
+    </div><!--end of modal-body-->
+
+    <div class="modal-footer">
+      <div class="pull-left">
+        <a class="close" data-dismiss="modal">Cancel</a>
+      </div>
+
+
+      <div class="form-actions">
+        <%= f.button :submit, :class => "btn btn-info", :style => 'font-size: 18px;' %>
+      </div>
+
+
+    </div><!--end of modal-footer-->
+  </div><!--end of modal-content-->
+</div><!--end of modal-dialog-->
+
+
 <% end %>

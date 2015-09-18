@@ -1,5 +1,7 @@
 <h2>Listing products</h2>
-<%= link_to 'New product', new_product_path %>
+
+<%= link_to "New Product", @new_path, { :id => "new_modal", :remote => true, 'data-toggle' => "modal", 'data-target' => '#modal-window'} %>
+           
 <br/>
   <table>
   <%@products.each do |product| %>
@@ -23,5 +25,12 @@
   <% end %>
   </table>
 <br/>
-
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#new_modal').click(function (event) {
+      $("#modal-window").html("<%= escape_javascript(render 'products/form', new_product: @product_a ) %>");
+    });
+  });
+     
+</script>
 

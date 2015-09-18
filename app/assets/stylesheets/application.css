@@ -11,6 +11,9 @@
  * file per style scope.
  *
  *= require bxslider
+ *= require jquery-ui
+ *= require bootstrap-modal-bs3patch
+ *= require bootstrap-modal
  *= require_tree .
  *= require_self
 
@@ -65,7 +68,7 @@ float: left;
 .my3 {
   /*background: #A9F5E1; */
   font: small-caps 18px/18px "TimesMew Roman" , serif;
-}
+} *= require jquery.modal
 .my4 {
   
   margin-right: 15px;
