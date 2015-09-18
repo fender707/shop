@@ -12,7 +12,6 @@
  *
  *= require bxslider
  *= require jquery-ui
- *= require jquery.modal
  *= require_tree .
  *= require_self
 
