@@ -2,9 +2,13 @@
 <div id="paintings">
   <%= render @paintings %>
 </div>
-<p>
-  <%= button_to "Add a Review", @new_path, { :class => "btn btn-primary", :style => "font: small-caps 16px/16px 'TimesMew Roman';", 'data-toggle' => "modal", 'data-target' => '.fade'} %>
-  
+<br />
+<%= button_to "Add a Review", @new_path, 
+  { :class => "btn btn-primary", 
+    :style => "font: small-caps 16px/16px 'TimesMew Roman';", 
+    'data-toggle' => "modal", 
+    'data-target' => '.fade'} %>  
+
 <div class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -18,4 +22,3 @@
     </div>
   </div>
 </div>      
-</p>
