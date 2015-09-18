@@ -3,6 +3,19 @@
   <%= render @paintings %>
 </div>
 <p>
-  <%= link_to "Add a Review", new_painting_path %>
+  <%= button_to "Add a Review", @new_path, { :class => "btn btn-primary", :style => "font: small-caps 16px/16px 'TimesMew Roman';", 'data-toggle' => "modal", 'data-target' => '.fade'} %>
   
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="close" style="padding-top: 15px;" data-dismiss="modal">×</a>
+        <h2>New Review</h2>
+      </div>
+      <div class="modal-body">
+        <%= render 'paintings/form', new_review: @review_a %>
+      </div>
+    </div>
+  </div>
+</div>      
 </p>

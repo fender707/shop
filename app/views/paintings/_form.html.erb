@@ -1,5 +1,5 @@
 
-<%= form_for @painting do |f| %>
+<%= form_for(new_review, class: 'form-horizontal') do |f| %>
    
    <div class="form-group">
      <%= f.label :name %><br />
@@ -12,7 +12,15 @@
      <%= f.label :review %><br />
      <%= f.text_area :review, :class => 'form-control' %>
    </div>
-   <div class="form-group">
-     <%= f.submit %>
-   </div>
+    <div class="modal-footer">
+      <div class="pull-left">
+        <a class="close" data-dismiss="modal">Cancel</a>
+      </div>
+      <div class="form-actions">
+        <%= f.submit "Save ", :class => "btn btn-info", :style => 'font-size: 18px;' %>
+      </div>
+
+
+    </div><!--end of modal-footer-->
+
 <% end %>

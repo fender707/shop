@@ -4,6 +4,8 @@ class PaintingsController < ApplicationController
 
   def index
     @paintings = Painting.all
+    @review_a = Painting.new
+    @new_path = new_painting_path
   end
 
   def create
