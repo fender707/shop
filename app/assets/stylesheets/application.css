@@ -12,6 +12,7 @@
  *
  *= require bxslider
  *= require jquery-ui
+
  *= require_tree .
  *= require_self
 
