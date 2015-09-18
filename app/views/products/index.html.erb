@@ -1,7 +1,21 @@
 <h2>Listing products</h2>
 
-<%= link_to "New Product", @new_path, { :id => "new_modal", :remote => true, 'data-toggle' => "modal", 'data-target' => '#modal-window'} %>
-           
+<%= button_to "New Product", @new_path, { :class => "btn btn-primary", :style => "font: small-caps 16px/16px 'TimesMew Roman';", 'data-toggle' => "modal", 'data-target' => '.fade'} %>'
+
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="close" style="padding-top: 15px;" data-dismiss="modal">×</a>
+        <h2>New Product</h2>
+      </div>
+      <div class="modal-body">
+        <%= render 'products/form', new_product: @product_a %>
+      </div>
+    </div>
+  </div>
+</div>      
 <br/>
   <table>
   <%@products.each do |product| %>
@@ -25,12 +39,5 @@
   <% end %>
   </table>
 <br/>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('#new_modal').click(function (event) {
-      $("#modal-window").html("<%= escape_javascript(render 'products/form', new_product: @product_a, modal: true ) %>");
-    });
-  });
-     
-</script>
+
 
