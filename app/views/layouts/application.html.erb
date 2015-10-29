@@ -96,11 +96,6 @@
   	        <% categories.each do |category| %>
                   <li class='reload'><%= link_to category.name, root_path(filter: category.id), :class => 'my5' %></li>
                 <% end %>
-              <center>
-                <h5><li class="nav-header"><%= t('.weather') %></li></h5>
-	        <li class="nav-header"><h6><%= t('.khmelnitsky') %></h6></li>
-	        <%= weather %>
-	      </center>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
