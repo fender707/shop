@@ -1,4 +1,4 @@
-<%= form_for(new_product, class: 'form-horizontal') do |f| %>
+<%= form_for(new_product, class: 'form-horizontal', :html => { :id => 'product_form'}) do |f| %>
 
       <div class="form-group">
         <%= f.label :title %><br /> 
@@ -37,3 +37,4 @@
     </div><!--end of modal-footer-->
 
 <% end %>
+

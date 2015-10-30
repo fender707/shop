@@ -11,7 +11,7 @@ gem 'carrierwave'
 gem 'mp3_player'
 gem 'rmagick', '~> 2.15.2'
 gem 'sprockets-helpers'
-
+gem "select2-rails", '3.5.9.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-modal-rails'

@@ -17,12 +17,14 @@
 //= require bootstrap
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
+//= require select2
 //= require jquery.turbolinks 
 //= require turbolinks
 //= require private_pub
 //= require bxslider
 //= require twitter/bootstrap
 //= require_tree .
+
 
 $(function() { 
   $("#notice").hide();
