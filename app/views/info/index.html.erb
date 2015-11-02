@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <ul class="bxslider">
   <% @products.each do |product| %>
-  <li><center><%= image_tag(product.image_url) %></center></li>
-<% end %>
+    <li><center><%= link_to image_tag(product.image_url), product_path(product.id) %></center></li>
+  <% end %>
 </ul>
- <div class="entry">
-   <%= render 'products' %>
- </div>
+<div class="entry">
+  <%= render 'products' %>
+</div>
 
