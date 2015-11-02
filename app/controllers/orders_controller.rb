@@ -26,7 +26,7 @@ before_action :find_order, only: [:show,:destroy,:edit]
         if @order.save
 	  Cart.destroy(session[:cart_id])
 	  session[:cart_id] = nil
-	  #Notifier.welcome(@order).deliver
+	  Notifier.welcome(@order).deliver
           format.html {redirect_to root_path, notice:
 	    'Thank you for your order.'}
  	  format.json {render json: @order, status: :created,

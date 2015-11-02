@@ -23,7 +23,7 @@
 //= require private_pub
 //= require bxslider
 //= require twitter/bootstrap
-//= require_tree .
+//= require_directory .
 
 
 
