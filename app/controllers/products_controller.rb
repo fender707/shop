@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-include Rails.application.routes.url_helpers
+  before_action :authenticate_user!
+  include Rails.application.routes.url_helpers
   before_action :find_product, only: [:show,:update,:destroy,:edit]
    # GET /reviews
 # GET /reviews.json
@@ -8,13 +9,13 @@ include Rails.application.routes.url_helpers
     if params[:search]
       @products = Product.search(params[:keyword]).filter(params[:filter])
       @categories = Category.all
-    @new_path = new_product_path
-    @product_a = Product.new         #for modal partial rendering
+      @new_path = new_product_path
+      @product_a = Product.new         #for modal partial rendering
     else
       @products = Product.all.order("Created_at DESC")
       @categories = Category.all
-    @new_path = new_product_path
-    @product_a = Product.new         #for modal partial rendering
+      @new_path = new_product_path
+      @product_a = Product.new         #for modal partial rendering
     end
 
      

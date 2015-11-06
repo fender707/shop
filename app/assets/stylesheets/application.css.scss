@@ -38,6 +38,7 @@ float: left;
 
 .my {
   /*background: #58D3F7; */
+  float: right;
   font: small-caps 18px/18px "TimesMew Roman" , serif;
 
 }
@@ -51,6 +52,10 @@ float: left;
 
 .btn-primary{
   font: small-caps 12px/12px "TimesMew Roman" , serif;
+}
+
+li.logout {
+  float: right;
 }
 
 .my1 {
@@ -82,9 +87,10 @@ float: left;
 
 li.searchh {
   /*background: #A9A9F2; */
-  
- 
-  
+}
+
+.navbar-nav {
+  width: 100%;
 }
 
 li.searchh  input {
@@ -96,6 +102,7 @@ li.searchh  input {
   }
 
 li.loginn {
+  float: right;
   background: #049cdb;
   margin-top: 15px;
   margin-left: 5px;

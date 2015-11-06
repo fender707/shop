@@ -1,5 +1,5 @@
 class PaintingsController < ApplicationController
-
+  before_action :authenticate_user!
   before_action :paint_params, only: [:show, :create, :update, :destroy]
 
   def index

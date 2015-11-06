@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :contacts
   
   devise_for :users
-  get 'info/index'
+  post 'info/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -76,6 +76,8 @@ Rails.application.routes.draw do
      resources :carts
      resources :line_items
      resources :orders
-       root 'info#index', via: :all
+     post 'info/index'
+     get 'info/index'
+     root 'main#index', via: :all
    end
 end

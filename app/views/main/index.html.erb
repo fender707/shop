@@ -1,0 +1,51 @@
+  <div class="main main-menu">
+    <div><%= link_to content_tag(:span, ''), info_index_path, class: 'top' %></div>
+    <div><%= link_to content_tag(:span, ''), products_path, class: 'add_product' %></div>
+			<hr class="crosshair">
+    <div><%= link_to content_tag(:span, ''), paintings_path, class: 'reviews_main' %></div>
+    <div><%= link_to content_tag(:span, ''), contacts_path, class: 'contacts_main' %></div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.top').on('mouseover', function() {
+        $(this).css({
+          'width': '80%',
+        });
+      });
+      $('.top').on('mouseout', function() {
+        $(this).css({
+          'width': '75%',
+        });
+      });
+      $('.add_product').on('mouseover', function() {
+        $(this).css({
+          'width': '80%',
+        });
+      });
+      $('.add_product').on('mouseout', function() {
+        $(this).css({
+          'width': '75%',
+        });
+      });
+      $('.reviews_main').on('mouseover', function() {
+        $(this).css({
+          'width': '80%',
+        });
+      });
+      $('.reviews_main').on('mouseout', function() {
+        $(this).css({
+          'width': '75%',
+        });
+      });
+      $('.contacts_main').on('mouseover', function() {
+        $(this).css({
+          'width': '80%',
+        });
+      });
+      $('.contacts_main').on('mouseout', function() {
+        $(this).css({
+          'width': '75%',
+        });
+      });
+    })
+  </script>

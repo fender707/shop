@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-
+  before_action :authenticate_user!
   before_filter :delete_dialogue
   
   def index
